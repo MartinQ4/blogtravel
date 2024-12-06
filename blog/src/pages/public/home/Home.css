@@ -1,0 +1,82 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.home-one{
+    width: 95vw;
+    height: 88vh;
+    
+    border-radius: 12px;
+
+    background-image: url('../../../assets/pictures/man-on-rock.jpg');
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+}
+
+.home-one-texts{
+    width: 45vw;
+    height: auto;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+h2{
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+
+.btn{
+    border-radius: 50px;
+    border: 1px solid var(--secondaryColor);
+    box-shadow: 1px 1px 2px gray;
+    
+}
+
+.btn a{
+    color: white;
+    cursor: pointer;
+}
+
+.dark{
+    background-color: var(--secondaryColor);
+}
+
+.light{
+    border: 1px solid white;
+    color: white;
+}
+
+.big{
+    padding: 8px 14px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: black;
+    border: 1px solid black;
+    background-color: black;
+    
+}
+
+.btn a {
+    cursor: pointer !important;
+  }
+
+@media (max-width: 900px){
+    .home-one-texts{
+        width: 100vw;
+    }
+}
+

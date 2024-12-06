@@ -1,0 +1,22 @@
+.form-add{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    font-family: var(--FontTwo);;
+}
+
+.form-add label{
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.form-add input,
+.form-add textarea,
+.form-add span,
+.form-add .btn{
+    margin-bottom: 20px;
+}
+
+.form-add .btn{
+    width: 20%;
+}

@@ -1,0 +1,719 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "john",
+      "firstname": "john",
+      "lastname": "doe",
+      "password": "password1",
+      "role": "user",
+      "email": "john@example.com",
+      "createdAt": "2024-11-21T10:00:00Z"
+    },
+    {
+      "id": "51",
+      "username": "jakub_novak",
+      "firstname": "Jakub",
+      "lastname": "Novák",
+      "password": "heslo",
+      "email": "jakub.novak@email.cz",
+      "role": "editor",
+      "phone": "+420 721 456 789",
+      "bio": "Jakub je vášnivý cestovatel, který se specializuje na low-cost cestování. Miluje objevování nečekaných míst a sdílení tipů, jak procestovat svět s minimálním rozpočtem. Věří, že zážitky z cest jsou cennější než drahé suvenýry. Kromě blogování rád fotí a pomáhá začínajícím cestovatelům plánovat jejich první výpravy.",
+      "profilepic": "/images/profile/profileJakub.jpg",
+      "dateAdded": "2023-05-15",
+      "motto": "Cestování není luxus, je to životní styl.",
+      "skills": [
+        "Fotografování",
+        "Plánování itinerářů",
+        "Orientace v terénu"
+      ],
+      "socials": {
+        "instagram": "@jakub_ontheroad"
+      },
+      "favoritePlace": "Vietnam",
+      "travelPreferences": [
+        "Lokální kuchyně",
+        "Pěší túry v horách",
+        "Poznávání méně známých měst"
+      ],
+      "mustHaveItem": "Fotoaparát"
+    },
+    {
+      "id": "52",
+      "username": "anna_vesela",
+      "firstname": "Anna",
+      "lastname": "Veselá",
+      "password": "heslo",
+      "email": "anna.vesela@email.cz",
+      "role": "editor",
+      "phone": "+420 606 789 123",
+      "bio": "Anna je energická maminka dvou dětí, která se zaměřuje na rodinné cestování. Sdílí tipy na dětsky přívětivé destinace, hotely a aktivity, které baví celou rodinu. Cestování s dětmi považuje za skvělou příležitost učit se o světě a posilovat rodinné vztahy. Její články jsou plné praktických tipů a inspirace pro rodiče.",
+      "profilepic": "/images/profile/profileAnna.jpg",
+      "dateAdded": "2022-10-10",
+      "motto": "Dobrodružství začíná tam, kde končí zóna pohodlí.",
+      "skills": [
+        "Organizace rodinných výletů",
+        "Vyhledávání dětských aktivit",
+        "Psaní průvodců"
+      ],
+      "socials": {
+        "facebook": "Rodinné výlety s Petrou"
+      },
+      "favoritePlace": "Rakouské Alpy",
+      "travelPreferences": [
+        "Rodinné výlety do přírody",
+        "Prohlídky zábavních parků",
+        "Odpočinkové pobyty u moře"
+      ],
+      "mustHaveItem": "Hrací karta pro děti"
+    },
+    {
+      "id": "53",
+      "username": "tereza_hlavacova",
+      "firstname": "Tereza",
+      "lastname": "Hlaváčová",
+      "password": "heslo",
+      "email": "tereza.hlavacova@email.cz",
+      "role": "editor",
+      "phone": "+420 777 123 456",
+      "bio": "Tereza je dobrodružná duše, která ráda spojuje cestování s outdoorovými aktivitami, jako je lezení nebo kayaking. Ráda píše o svých cestách do odlehlých oblastí, kde člověk najde klid a spojení s přírodou. Inspiruje své čtenáře k tomu, aby se nebáli vydat za hranice běžného komfortu a objevili sami sebe.",
+      "profilepic": "/images/profile/profileTereza.jpg",
+      "dateAdded": "2024-02-01",
+      "motto": "Za horizontem se skrývá nové dobrodružství.",
+      "skills": [
+        "Lezení",
+        "Plánování outdoorových výprav",
+        "První pomoc v přírodě"
+      ],
+      "socials": {
+        "youtube": "Outdoor s Terezou"
+      },
+      "favoritePlace": "Norsko",
+      "travelPreferences": [
+        "Kempování",
+        "Horské túry",
+        "Lezení"
+      ],
+      "mustHaveItem": "Cestovatelský deník"
+    },
+    {
+      "id": "54",
+      "username": "marek_krasek",
+      "firstname": "Marek",
+      "lastname": "Krásek",
+      "password": "heslo",
+      "email": "marek.krasek@email.cz",
+      "role": "editor",
+      "phone": "+420 604 987 654",
+      "bio": "Marek je milovník městské turistiky a gurmán, který rád objevuje nejlepší kavárny, trhy a skryté gastronomické poklady. Jeho články se zaměřují na tipy pro milovníky jídla, ale zároveň motivují k objevování místní kultury a tradic. Marek je expert na evropská města, ale plánuje rozšířit své obzory i mimo kontinent.",
+      "profilepic": "/images/profile/profileMarek.jpg",
+      "dateAdded": "2023-08-20",
+      "motto": "Chutě světa jsou tím nejlepším průvodcem.",
+      "skills": [
+        "Food styling",
+        "Plánování městských tras",
+        "Vyhledávání lokálních specialit"
+      ],
+      "socials": {
+        "twitter": "@foodie_travels_marek"
+      },
+      "favoritePlace": "Barcelona",
+      "travelPreferences": [
+        "Gastronomické prohlídky",
+        "Městská architektura",
+        "Návštěvy muzeí"
+      ],
+      "mustHaveItem": "Zápisník na tipy o jídle a restauracích"
+    },
+    {
+      "id": "100",
+      "username": "admin",
+      "password": "heslo",
+      "role": [
+        "admin",
+        "user"
+      ],
+      "firstname": "Erik",
+      "lastname": "Mladý"
+    }
+  ],
+  "posts": [
+    {
+      "id": "161",
+      "title": "Jak na levný roadtrip po Evropě: Praktické tipy a triky",
+      "description": "Zjistěte, jak si naplánovat roadtrip po Evropě s minimálním rozpočtem. Přinášíme vám tipy na ubytování, dopravu a levné jídlo.",
+      "content": {
+        "intro": "Plánování roadtripu po Evropě s minimálním rozpočtem může znít náročně, ale s několika chytrými triky a tipy se to dá zvládnout i pro cestovatele s omezenými prostředky. Zde je několik rad, jak si užít cestu, aniž byste museli sahat hluboko do peněženky.",
+        "sections": [
+          {
+            "title": "1. Doprava – Efektivně a levně",
+            "text": "Pro cestování po Evropě je ideální využít levné autobusy nebo vlaky. Společnosti jako FlixBus nebo Ryanair nabízejí skvělé akce na přepravu mezi městy za nízké ceny. Pokud máte flexibilní termíny, doporučuji využít i cenové srovnávače jako Omio, kde můžete najít nejlevnější možnosti dopravy."
+          },
+          {
+            "title": "2. Ubytování – Hledejte alternativy",
+            "text": "Místo hotelů nebo drahých hostelů zkuste Airbnb nebo Couchsurfing, kde se můžete ubytovat u místních a poznat nová prostředí. Pokud máte stan, můžete využít kempování, což je nejen levné, ale i skvělé pro milovníky přírody. Některé evropské země mají skvělé kempingové oblasti, kde můžete spát za pár eur."
+          },
+          {
+            "title": "3. Jídlo – Snídejte, obědvejte a večeřete jako místní",
+            "text": "Místní trhy a supermarkety jsou ideálním místem, kde si můžete nakoupit levné potraviny. S sebou si můžete vzít i pár věcí na vaření, což vám ušetří spoustu peněz. Pokud se chcete na cestách podívat na místní kuchyni, vyhýbejte se turistickým restauracím a raději zkuste malou rodinnou restauraci, kde jídlo bývá kvalitní a cenově dostupné."
+          },
+          {
+            "title": "4. Plánujte dopředu, ale zůstaňte flexibilní",
+            "text": "Sice je dobré mít základní plán, ale flexibilita je klíčová pro nízkonákladový roadtrip. Mějte nějaké základní trasy a cíle, ale zbytečně se neupínejte na pevné itineráře. Možná objevíte lepší možnosti, jak strávit čas nebo navštívit nějaká neobjevená místa."
+          }
+        ],
+        "conclusion": "Pokud budete mít tyto tipy na paměti, můžete si užít fantastický roadtrip po Evropě a poznat nová místa bez toho, abyste se museli obávat vysokých nákladů. Cestování je o zážitcích a objevování, nikoliv o luxusu."
+      },
+      "picture": "/images/posts/roadtrip-one.jpg",
+      "date": "2024-11-15",
+      "authorId": "51",
+      "likes": 136,
+      "comments": [
+        1,
+        2,
+        1732455980459,
+        1732455981227,
+        1733308741719
+      ],
+      "category": "Roadtrip",
+      "hashtags": [
+        "#roadtrip",
+        "#levnecestování",
+        "#Evropa",
+        "#lowcost"
+      ],
+      "rating": 4.7,
+      "tags": [
+        "doprava",
+        "ubytování",
+        "kempování"
+      ],
+      "socialShares": {
+        "facebook": 50,
+        "twitter": 20,
+        "instagram": 30
+      },
+      "location": "Evropa",
+      "cta": {
+        "text": "Zjistěte více o plánování roadtripu",
+        "url": "https://www.roadtrip-tips.cz"
+      },
+      "relatedPosts": [
+        {
+          "id": 2,
+          "title": "5 tipů, jak ušetřit na cestách po Evropě"
+        }
+      ],
+      "readingTime": "6 minut",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": "162",
+      "title": "Rodinná dovolená v rakouských Alpách",
+      "description": "Objevte, jak si naplánovat rodinnou dovolenou v rakouských Alpách. Přinášíme vám tipy na aktivity, ubytování a zážitky vhodné pro všechny věkové kategorie.",
+      "content": {
+        "intro": "Rakouské Alpy jsou ideální destinací pro rodinnou dovolenou – nabízejí krásnou přírodu, rozmanité aktivity a možnosti, jak si užít čas spolu. Pokud hledáte dovolenou, která spojí odpočinek s dobrodružstvím, přinášíme vám několik praktických tipů, jak si ji naplánovat.",
+        "sections": [
+          {
+            "title": "1. Ubytování – Pohodlí pro celou rodinu",
+            "text": "Pro rodiny jsou skvělou volbou apartmány nebo chalupy, které nabízejí dostatek prostoru a možnost vlastního vaření. Mnoho alpských městeček, jako je Zell am See nebo Innsbruck, má také rodinné hotely s aktivitami pro děti. Pokud chcete zažít něco speciálního, zkuste ubytování na horské chatě s nádherným výhledem."
+          },
+          {
+            "title": "2. Aktivity – Zábava pro malé i velké",
+            "text": "V Alpách najdete spoustu aktivit vhodných pro rodiny. V létě si užijete turistiku po nenáročných stezkách, které jsou přizpůsobeny i pro kočárky. K oblíbeným aktivitám patří také cyklistika, jízda na lanovkách nebo návštěva zábavních parků, jako je Hexenwasser v Söll. V zimě jsou k dispozici lyžařské areály s výukou pro děti nebo sáňkařské dráhy."
+          },
+          {
+            "title": "3. Jídlo – Rakouské speciality pro každého",
+            "text": "Rakouská kuchyně nabízí mnoho chutných pokrmů, které si oblíbí i děti. Na horských chatách můžete ochutnat tradiční štrúdl, knedlíky nebo Kaiserschmarrn – sladké trhané palačinky. Pokud dáváte přednost vlastní přípravě jídel, navštivte místní trhy, kde najdete čerstvé a kvalitní suroviny."
+          },
+          {
+            "title": "4. Relaxace – Chvíle klidu pro rodiče",
+            "text": "Po aktivním dni si dopřejte odpočinek v termálních lázních nebo wellness centrech, které najdete v mnoha alpských destinacích. Některé hotely nabízejí také hlídání dětí, takže si rodiče mohou vychutnat chvíle klidu. Alpy jsou ideálním místem pro odpočinek v přírodě a načerpání nové energie."
+          }
+        ],
+        "conclusion": "Rakouské Alpy jsou ideální volbou pro rodinnou dovolenou plnou zážitků. Kombinují přírodní krásy, široké možnosti aktivit a skvělé ubytování pro rodiny. Naplánujte si výlet, který bude bavit malé i velké, a užijte si společné chvíle v jednom z nejkrásnějších koutů Evropy."
+      },
+      "picture": "/images/posts/austria-mountains.jpg",
+      "date": "2024-11-16",
+      "authorId": "52",
+      "likes": 75,
+      "comments": [
+        1,
+        2
+      ],
+      "category": "Rodina",
+      "hashtags": [
+        "#rodinnédovolené",
+        "#Rakousko",
+        "#Alpy",
+        "#rodinacestování"
+      ],
+      "rating": 4.6,
+      "tags": [
+        "dovolená",
+        "rodinné výlety",
+        "Alpy"
+      ],
+      "socialShares": {
+        "facebook": 30,
+        "twitter": 15,
+        "instagram": 25
+      },
+      "location": "Rakousko, Alpy",
+      "cta": {
+        "text": "Plánujte svou rodinnou dovolenou v Alpách",
+        "url": "https://www.rodinna-dovolena.cz/alpy"
+      },
+      "relatedPosts": [
+        {
+          "id": 3,
+          "title": "Top 10 rodinných destinací v Evropě"
+        }
+      ],
+      "readingTime": "5 minut",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": "163",
+      "title": "Outdoorové dobrodružství v norských horách",
+      "description": "Vydejte se na nezapomenutelné dobrodružství v norských horách. Přinášíme vám tipy na túry, lezení a aktivity pro milovníky přírody.",
+      "content": {
+        "intro": "Norské hory lákají svou divokou krásou, rozmanitými možnostmi outdoorových aktivit a klidem přírody. Ať už jste zkušený horolezec, nadšený turista nebo jen hledáte inspiraci pro svůj další dobrodružný výlet, norské hory mají co nabídnout. Přečtěte si naše tipy, jak si naplánovat nezapomenutelnou cestu.",
+        "sections": [
+          {
+            "title": "1. Túry pro každého",
+            "text": "Norské hory nabízejí trasy všech úrovní obtížnosti. Oblíbenými destinacemi jsou národní parky Jotunheimen a Rondane, kde můžete podniknout túry k malebným jezerům a ledovcům. Pro začátečníky jsou ideální kratší stezky, například k vyhlídce Preikestolen, zatímco zkušení turisté mohou zkusit výstup na horu Galdhøpiggen, nejvyšší vrchol Skandinávie."
+          },
+          {
+            "title": "2. Horolezectví a lezení po skalách",
+            "text": "Milovníci horolezectví si v Norsku přijdou na své. Oblasti jako Romsdalen a Lofoty nabízejí úžasné skalní stěny a více délkové trasy s výhledem na fjordy. Pokud jste nováček, můžete se přidat ke skupinovým výstupům s průvodcem, které zajistí bezpečnost a zároveň nabídnou nezapomenutelné zážitky."
+          },
+          {
+            "title": "3. Přenocování v přírodě",
+            "text": "Přenocování v norských horách je zážitkem samo o sobě. Můžete si zvolit jednoduché spaní pod širákem nebo přenocovat v tradičních horských chatách. Norsko má unikátní systém DNT (Norská turistická asociace), který nabízí přístup do více než 500 horských chat, často vybavených základními potřebami a kuchyní."
+          },
+          {
+            "title": "4. Ekologické dobrodružství",
+            "text": "Norsko klade velký důraz na ochranu přírody, a proto je ideálním místem pro ekologicky šetrné dobrodružství. Respektujte zásadu *Leave No Trace* a snažte se minimalizovat svůj dopad na přírodu. Mnoho turistických tras a chat podporuje udržitelný turismus, což vám umožní užít si krásy norské přírody s čistým svědomím."
+          }
+        ],
+        "conclusion": "Outdoorové dobrodružství v norských horách je snem každého milovníka přírody. Připravte si vybavení, naplánujte trasu a vydejte se na cestu, která vás odmění dechberoucími výhledy, klidem přírody a nezapomenutelnými zážitky. Ať už hledáte výzvu nebo odpočinek, norské hory vás nezklamou."
+      },
+      "picture": "/images/posts/norway-mountains.jpg",
+      "date": "2024-11-17",
+      "authorId": "53",
+      "likes": 95,
+      "comments": [
+        1,
+        2
+      ],
+      "category": "Evropa",
+      "hashtags": [
+        "#Norsko",
+        "#outdoor",
+        "#turistika",
+        "#dobrodružství"
+      ],
+      "rating": 4.9,
+      "tags": [
+        "hory",
+        "lezení",
+        "túry"
+      ],
+      "socialShares": {
+        "facebook": 40,
+        "twitter": 25,
+        "instagram": 35
+      },
+      "location": "Norsko",
+      "cta": {
+        "text": "Zjistěte více o outdoorových aktivitách v Norsku",
+        "url": "https://www.norsko-adventure.cz"
+      },
+      "relatedPosts": [
+        {
+          "id": 4,
+          "title": "Jak se připravit na horskou túru v Norsku"
+        }
+      ],
+      "readingTime": "8 minut",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": "164",
+      "title": "Gastronomická prohlídka Barcelony: Kde ochutnat nejlepší tapas",
+      "description": "Vychutnejte si kulinářskou atmosféru Barcelony a zjistěte, kde najdete ty nejlepší tapas. Objevte tradiční bary, moderní podniky a skryté perly.",
+      "content": {
+        "intro": "Barcelona je nejen městem umění a architektury, ale také kulinářským rájem. Tapas – malé španělské pochoutky – jsou jedním z nejlepších způsobů, jak si vychutnat místní kuchyni a atmosféru města. Přinášíme vám tipy na místa, která nesmíte minout, pokud chcete zažít pravou chuť Barcelony.",
+        "sections": [
+          {
+            "title": "1. Tradiční tapas bary",
+            "text": "Pro autentický zážitek doporučujeme navštívit tradiční tapas bary, jako je *Quimet & Quimet* v čtvrti Poble Sec. Tento malý bar je proslulý svými kreativními kombinacemi chutí a čerstvými surovinami. Dalším skvělým místem je *El Xampanyet* poblíž gotické čtvrti, kde si můžete dát tradiční sardinky, jamón a domácí cava."
+          },
+          {
+            "title": "2. Moderní pojetí tapas",
+            "text": "Barcelona je také městem inovací, což se odráží v moderním pojetí tapas. Restaurace *Tickets*, vedená bratry Adrià, nabízí avantgardní tapas připravené z těch nejkvalitnějších surovin. Pokud hledáte něco méně formálního, zkuste *Bar Cañete*, kde se snoubí tradiční recepty s moderním nádechem."
+          },
+          {
+            "title": "3. Skryté perly mimo turistické trasy",
+            "text": "Pokud chcete uniknout davům, vydejte se do méně známých čtvrtí, jako je Sant Antoni. Bar *Bodega 1900* je ideálním místem pro ochutnání klasických tapas v příjemném prostředí. Milovníci klidnější atmosféry ocení také *La Cova Fumada* v Barcelonetě, kde údajně vznikly slavné bombas – smažené bramborové koule plněné masem."
+          },
+          {
+            "title": "4. Trhy a street food",
+            "text": "Trh *La Boqueria* na La Rambla je známý po celém světě a nabízí nejen čerstvé suroviny, ale i tapas stánky, kde si můžete pochutnat na všem od mořských plodů po smažené kroketky. Pokud chcete ochutnat street food, navštivte některý z nočních trhů, jako je *Palo Alto Market*, kde najdete moderní interpretace tradičních pokrmů."
+          }
+        ],
+        "conclusion": "Barcelona je gastronomickým rájem, který nabízí nepřeberné množství chutí a zážitků. Od tradičních tapas barů až po moderní restaurace a živé trhy, každé sousto vám přinese kousek autentické katalánské kultury. Vydejte se na gastronomickou prohlídku a objevte, proč je Barcelona považována za jedno z nejlepších měst pro milovníky jídla."
+      },
+      "picture": "/images/posts/barcelona.jpg",
+      "date": "2024-11-18",
+      "authorId": "54",
+      "likes": 110,
+      "comments": [
+        1,
+        2
+      ],
+      "category": "Gastronomie",
+      "hashtags": [
+        "#Barcelona",
+        "#gastronomie",
+        "#tapasy",
+        "#foodie"
+      ],
+      "rating": 4.8,
+      "tags": [
+        "gastronomie",
+        "tapasy",
+        "restaurace"
+      ],
+      "socialShares": {
+        "facebook": 60,
+        "twitter": 40,
+        "instagram": 50
+      },
+      "location": "Barcelona, Španělsko",
+      "cta": {
+        "text": "Objevte nejlepší tapas v Barceloně",
+        "url": "https://www.tapas-barcelona.cz"
+      },
+      "relatedPosts": [
+        {
+          "id": 5,
+          "title": "Kde najít nejlepší trhy v Barceloně"
+        }
+      ],
+      "readingTime": "5 minut",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": "165",
+      "title": "Jak naplánovat rodinný výlet po Balkánu",
+      "description": "Zjistěte, jak si naplánovat rodinný výlet po Balkánu s minimálním rozpočtem. Přinášíme vám tipy na dopravu, ubytování a nezapomenutelné zážitky.",
+      "content": {
+        "intro": "Rodinný výlet po Balkánu je skvělou příležitostí, jak strávit čas s blízkými a objevit jedinečné kulturní i přírodní krásy této oblasti. Připravili jsme pro vás praktické tipy, které vám pomohou udržet rozpočet na uzdě a zároveň si užít výjimečné chvíle.",
+        "sections": [
+          {
+            "title": "1. Výběr dopravy – Flexibilita je klíčová",
+            "text": "Pro cestování po Balkánu doporučujeme využít vlastní auto, což vám zajistí maximální flexibilitu. Pokud auto nemáte, podívejte se na nabídky půjčoven, které často nabízejí výhodné balíčky. Alternativou jsou mezinárodní autobusy, například Eurolines nebo FlixBus, které spojují velká města regionu za rozumné ceny. Při plánování tras nezapomeňte zohlednit mýtné poplatky a ceny pohonných hmot v jednotlivých zemích."
+          },
+          {
+            "title": "2. Ubytování – Spojte pohodlí s lokální atmosférou",
+            "text": "Na Balkáně najdete širokou škálu ubytování od rodinných penzionů a apartmánů až po cenově dostupné hotely. Skvělou možností je také využít platformy jako Airbnb, kde můžete najít útulné domy nebo byty. Pro rodiny s dětmi doporučujeme vyhledávat ubytování s kuchyňkou, což vám umožní připravovat vlastní jídlo. Pokud preferujete přírodu, některé oblasti, jako například Chorvatské národní parky, nabízejí skvělé možnosti kempování."
+          },
+          {
+            "title": "3. Jídlo – Ochutnejte místní speciality",
+            "text": "Balkán je známý svou bohatou kuchyní. Nezapomeňte ochutnat tradiční pokrmy jako burek, cevapi nebo rakiju. Pokud chcete ušetřit, nakupujte na místních trzích, kde najdete čerstvé ovoce, zeleninu a další potraviny za příznivé ceny. Rodinné restaurace a bistro podniky často nabízejí chutné pokrmy za zlomek ceny oproti turistickým lokalitám. Při delších cestách se vyplatí mít s sebou pár základních ingrediencí na rychlou přípravu jídla."
+          },
+          {
+            "title": "4. Kam se vydat – Rodinné aktivity a přírodní krásy",
+            "text": "Balkán nabízí nepřeberné množství zajímavých míst. Pro rodiny doporučujeme návštěvu Plitvických jezer v Chorvatsku, průzkum historických měst jako Mostar v Bosně a Hercegovině nebo výlet k Černohorskému pobřeží. Děti určitě nadchne plavba po Dunaji nebo výlet lodí po Ochridském jezeře. Pokud máte více času, nechte si prostor pro spontánní objevování – Balkán je plný skrytých pokladů."
+          },
+          {
+            "title": "5. Tipy na rozpočet – Malé výdaje, velké zážitky",
+            "text": "Stanovte si přibližný rozpočet na den, abyste měli přehled o výdajích. Využívejte aplikace pro hledání levné dopravy a ubytování, například Omio nebo Booking.com. Plánujte delší zastávky v cenově dostupnějších destinacích, kde si můžete dopřát více aktivit za méně peněz. Nezapomeňte na místní SIM karty s daty pro snadnější navigaci a komunikaci."
+          }
+        ],
+        "conclusion": "Rodinný výlet po Balkánu může být nezapomenutelným dobrodružstvím, aniž by vás finančně zruinoval. Stačí trochu plánování, otevřená mysl a chuť objevovat. S našimi tipy si užijete krásy Balkánu naplno a vytvoříte si vzpomínky, které vás budou provázet celý život."
+      },
+      "picture": "/images/posts/balkans.jpg",
+      "date": "2024-11-20",
+      "authorId": "51",
+      "likes": 85,
+      "comments": [
+        1,
+        2
+      ],
+      "category": "Roadtrip",
+      "hashtags": [
+        "#Balkán",
+        "#lowcost",
+        "#víkendovývýlet",
+        "#cestování"
+      ],
+      "rating": 4.6,
+      "tags": [
+        "Balkán",
+        "levné ubytování",
+        "víkendové výlety"
+      ],
+      "socialShares": {
+        "facebook": 45,
+        "twitter": 15,
+        "instagram": 25
+      },
+      "location": "Balkán",
+      "cta": {
+        "text": "Objevte krásy Balkánu s nízkým rozpočtem",
+        "url": "https://www.lowcost-balkan.cz"
+      },
+      "relatedPosts": [
+        {
+          "id": 1,
+          "title": "Jak na levný roadtrip po Evropě: Praktické tipy a triky"
+        }
+      ],
+      "readingTime": "7 minut",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": "166",
+      "title": "Jak naplánovat aktivní rodinnou dovolenou ve Švýcarsku",
+      "description": "Naplánujte si rodinnou dovolenou ve Švýcarsku plnou outdoorových aktivit. Od horských túr po zábavné parky – Švýcarsko má něco pro každého člena rodiny.",
+      "content": {
+        "intro": "Švýcarsko je ideální destinací pro aktivní rodinnou dovolenou. Jeho nádherné hory, jezera a malebná městečka nabízejí nepřeberné množství aktivit, které potěší malé i velké. Připravte si cestovní plán plný zážitků, na které vaše rodina nikdy nezapomene.",
+        "sections": [
+          {
+            "title": "1. Rodinné túry s výhledem na Alpy",
+            "text": "Švýcarsko nabízí túry všech obtížností, které jsou vhodné i pro děti. Trasa kolem jezera Oeschinen u Kanderstegu patří mezi nejkrásnější v zemi. Pro rodiny s menšími dětmi je ideální stezka Arosa Bärenland, která nabízí lehkou procházku s možností pozorování medvědů v přírodní rezervaci."
+          },
+          {
+            "title": "2. Vlakem za dobrodružstvím",
+            "text": "Cestování vlakem je ve Švýcarsku zážitkem samo o sobě. Vydejte se na ikonickou trasu Glacier Express, která vás provede horskými údolími a kolem ledovců. Děti si užijí také zábavu na Rhétské dráze, kde můžete zažít jízdu historickými vagóny nebo panoramatické výhledy."
+          },
+          {
+            "title": "3. Zábavní parky a interaktivní muzea",
+            "text": "Švýcarsko nabízí skvělé zábavní parky, například Swiss Vapeur Park, kde si můžete užít miniaturní vláčky v krásném prostředí. Pro zvídavé děti je ideálním místem Technorama, interaktivní vědecké muzeum, kde si mohou vyzkoušet desítky experimentů."
+          },
+          {
+            "title": "4. Vodní radovánky a dobrodružství na jezerech",
+            "text": "Švýcarská jezera, jako například Ženevské nebo Lucernské, jsou perfektní pro koupání, paddleboarding nebo plavbu lodí. Mnoho rekreačních oblastí nabízí pláže s dětskými hřišti a možnost půjčení vybavení, což ocení celá rodina."
+          }
+        ],
+        "conclusion": "Aktivní rodinná dovolená ve Švýcarsku spojuje krásy přírody, zábavu a jedinečné zážitky. Ať už se rozhodnete pro horské túry, projížďky vlakem nebo zábavní parky, vaše dovolená bude nezapomenutelná pro všechny členy rodiny. Vydejte se za dobrodružstvím a objevte, proč je Švýcarsko tak oblíbenou destinací pro rodinné cestování."
+      },
+      "picture": "/images/posts/switzerland.jpg",
+      "date": "2024-11-21",
+      "authorId": "52",
+      "likes": 110,
+      "comments": [
+        1,
+        2
+      ],
+      "category": "Rodina",
+      "hashtags": [
+        "#Švýcarsko",
+        "#rodinná dovolená",
+        "#outdoor"
+      ],
+      "rating": 4.8,
+      "tags": [
+        "turistika",
+        "rodinné výlety",
+        "hory"
+      ],
+      "socialShares": {
+        "facebook": 50,
+        "twitter": 20,
+        "instagram": 30
+      },
+      "location": "Švýcarsko",
+      "cta": {
+        "text": "Plánujte aktivní rodinnou dovolenou ve Švýcarsku",
+        "url": "https://www.rodinna-dovolená-switzerland.cz"
+      },
+      "relatedPosts": [
+        {
+          "id": 2,
+          "title": "Rodinná dovolená v Rakouských Alpách: Skvélé tipy na výlet"
+        }
+      ],
+      "readingTime": "6 minut",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": "167",
+      "title": "Na horském kole v Tatrách: Nejlepší trasy pro začátečníky i pokročilé",
+      "description": "Objevte krásy Tater na horském kole. Přinášíme vám tipy na nejlepší cyklistické trasy, ať už jste začátečník, nebo zkušený jezdec.",
+      "content": {
+        "intro": "Tatry jsou jedním z nejkrásnějších horských regionů ve střední Evropě a nabízejí skvělé možnosti pro horskou cyklistiku. Bez ohledu na vaši úroveň dovedností najdete v Tatrách trasy, které vám umožní užít si adrenalin i krásnou přírodu. Zde jsou některé z nejlepších tras pro začátečníky i pokročilé jezdce.",
+        "sections": [
+          {
+            "title": "1. Trasy pro začátečníky: Pohodové projížďky v přírodě",
+            "text": "Pro méně zkušené cyklisty jsou ideální trasy kolem Štrbského plesa nebo v okolí Tatranské Lomnice. Tyto cesty nabízejí snadný terén s minimálním převýšením a krásnými výhledy na tatranské vrcholy. Další oblíbenou trasou je cyklostezka Poprad – Starý Smokovec, která je vhodná pro rodiny s dětmi."
+          },
+          {
+            "title": "2. Středně náročné trasy: Výzvy s odměnou v podobě výhledů",
+            "text": "Pokud si chcete vyzkoušet něco náročnějšího, vydejte se na trasu ze Smokovce do Hrebienku. Středně náročná cesta zahrnuje stoupání, ale odmění vás panoramatickými výhledy. Další výzvou je trasa kolem Liptovské Mary, která kombinuje horskou a rovinatou jízdu s nádhernými scenériemi."
+          },
+          {
+            "title": "3. Náročné trasy pro pokročilé: Adrenalin na horských stezkách",
+            "text": "Zkušení jezdci ocení trasy jako *Tatranská magistrála*, která je známá svým technickým terénem a strmými stoupáními. Další výzvou je jízda v oblasti Roháčů na západě Tater, kde se setkáte s kamenitými úseky, prudkými sjezdy a dechberoucími výhledy."
+          },
+          {
+            "title": "4. Tipy pro bezpečnou jízdu v horách",
+            "text": "Horská cyklistika v Tatrách vyžaduje dobré vybavení a přípravu. Vždy mějte kvalitní horské kolo, helmu a základní nářadí pro případ poruchy. Sledujte počasí, protože v horách se může rychle změnit, a dbejte na respektování pravidel ochrany přírody."
+          }
+        ],
+        "conclusion": "Tatry nabízejí nezapomenutelný zážitek pro milovníky horské cyklistiky. Ať už jste začátečník, nebo hledáte náročné trasy, region má co nabídnout. Připravte své kolo, vydejte se na cestu a užijte si kombinaci adrenalinu, pohybu a krásné přírody."
+      },
+      "picture": "/images/posts/mountain-bikes.jpg",
+      "date": "2024-11-22",
+      "authorId": "53",
+      "likes": 95,
+      "comments": [
+        1,
+        2
+      ],
+      "category": "Cyklistika",
+      "hashtags": [
+        "#Tatry",
+        "#cyklistika",
+        "#outdoor",
+        "#horskácyklistika"
+      ],
+      "rating": 4.9,
+      "tags": [
+        "cyklistika",
+        "Tatry",
+        "hory"
+      ],
+      "socialShares": {
+        "facebook": 40,
+        "twitter": 25,
+        "instagram": 35
+      },
+      "location": "Tatry, Slovensko",
+      "cta": {
+        "text": "Objevte nejlepší cyklistické trasy v Tatrách",
+        "url": "https://www.tatry-cykloturistika.sk"
+      },
+      "relatedPosts": [
+        {
+          "id": 3,
+          "title": "Outdoorové dobrodružství v norských horách"
+        }
+      ],
+      "readingTime": "8 minut",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": "168",
+      "title": "Nejlepší místa na tapas v Madridu: Kde ochutnat tradiční španělské jídlo",
+      "description": "Objevte nejlepší místa v Madridu, kde si můžete vychutnat tradiční španělské tapas. Tipy na bary a restaurace, které stojí za návštěvu.",
+      "content": {
+        "intro": "Madrid, hlavní město Španělska, je známé nejen svou kulturou a historií, ale také bohatou gastronomickou scénou. Jedním z nejlepších způsobů, jak poznat španělskou kuchyni, je ochutnat tapas – malé pokrmy ideální k sdílení. Zde jsou tipy na místa, kde ochutnáte ty nejlepší tapas v Madridu.",
+        "sections": [
+          {
+            "title": "1. Mercado de San Miguel – Tradiční a moderní na jednom místě",
+            "text": "Mercado de San Miguel je ikonický trh v srdci Madridu. Najdete zde široký výběr tapas od tradičních španělských až po moderní interpretace. Doporučujeme vyzkoušet jamón ibérico, croquetas nebo patatas bravas. Trh má skvělou atmosféru, která spojuje místní obyvatele i turisty."
+          },
+          {
+            "title": "2. La Latina – Čtvrť plná tapas barů",
+            "text": "Čtvrť La Latina je známá jako centrum tapas kultury v Madridu. Bary jako *Casa Lucio* nebo *El Viajero* nabízejí autentické tapas v tradičním prostředí. Vyzkoušejte například huevos rotos, což je pokrm z brambor a vajec, nebo boquerones, marinované ančovičky."
+          },
+          {
+            "title": "3. Taberna El Sur – Oblíbený mezi místními",
+            "text": "Taberna El Sur je nenápadné místo, které si oblíbili místní. Nabízí široký výběr tapas za dostupné ceny. Zkuste gambas al ajillo (krevety v česnekové omáčce) nebo pimientos de padrón (smažené papriky). Přátelská atmosféra a skvělý servis jsou bonus."
+          },
+          {
+            "title": "4. Malasaña – Moderní tapas a inovativní přístup",
+            "text": "Pokud hledáte moderní pojetí tapas, čtvrť Malasaña je ideální volbou. Bary jako *Ojalá* nebo *La Musa* kombinují tradiční suroviny s kreativními postupy. Ochutnejte tapas s mořskými plody nebo fúzi asijských a španělských chutí."
+          }
+        ],
+        "conclusion": "Madrid je tapas rájem, který uspokojí všechny milovníky španělské kuchyně. Od tradičních chutí v La Latina až po moderní interpretace v Malasaña, město nabízí nevyčerpatelné možnosti, jak si vychutnat tapas. Vydejte se objevovat místní bary a restaurace a užijte si autentický gastronomický zážitek."
+      },
+      "picture": "/images/posts/madrid.jpg",
+      "date": "2024-11-23",
+      "authorId": "54",
+      "likes": 100,
+      "comments": [
+        1,
+        2
+      ],
+      "category": "Gastronomie",
+      "hashtags": [
+        "#Madrid",
+        "#gastronomie",
+        "#tapasy",
+        "#španělskádovolená"
+      ],
+      "rating": 4.7,
+      "tags": [
+        "gastronomie",
+        "restaurace",
+        "španělské jídlo"
+      ],
+      "socialShares": {
+        "facebook": 60,
+        "twitter": 30,
+        "instagram": 40
+      },
+      "location": "Madrid, Španělsko",
+      "cta": {
+        "text": "Objevte nejlepší tapas bary v Madridu",
+        "url": "https://www.tapas-madrid.cz"
+      },
+      "relatedPosts": [
+        {
+          "id": 4,
+          "title": "Gastronomická prohlídka Barcelony: Kde ochutnat nejlepší tapas"
+        }
+      ],
+      "readingTime": "6 minut",
+      "video": "https://www.youtube.com/watch?v=example"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 151,
+      "authorId": 1,
+      "content": "Skvělý post!",
+      "date": "2024-11-21T11:00:00Z",
+      "approved": true
+    },
+    {
+      "id": "2",
+      "postId": 151,
+      "authorId": 2,
+      "content": "Souhlasím s názorem autora.",
+      "date": "2024-11-21T12:00:00Z",
+      "approved": true
+    },
+    {
+      "id": "1732455980459",
+      "postId": 161,
+      "authorId": 1,
+      "content": "new",
+      "date": "2024-11-24T13:46:20.459Z",
+      "approved": true
+    },
+    {
+      "id": "1732455981227",
+      "postId": 161,
+      "authorId": 1,
+      "content": "",
+      "date": "2024-11-24T13:46:21.227Z",
+      "approved": true
+    },
+    {
+      "id": "1733308741719",
+      "postId": 161,
+      "authorId": 1,
+      "content": "nnnn",
+      "date": "2024-12-04T10:39:01.719Z",
+      "approved": true
+    }
+  ]
+}

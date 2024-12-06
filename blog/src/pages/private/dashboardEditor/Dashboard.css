@@ -1,0 +1,282 @@
+.head{
+    width: 100%;  
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.editor-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.editor-layout main{
+    margin-left: 200px; 
+    width: calc(100% - 200px); 
+    padding: 50px 40px 50px 40px; 
+}
+
+
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard-left{
+    width: 70%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-left div{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-left .two{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.two div{
+    height: 100%;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+}
+
+.dashboard-left .one,
+.dashboard-left .three,
+.dashboard-left .four{
+    border: 1px solid lightgray;
+    border-radius: 12px;
+}
+
+.dashboard-left .one{
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+    background-image: url('../../../assets/pictures/winter.jpg');
+    background-size: cover;
+    height: 22%;
+}
+
+.dashboard-left .three{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-left .four p{
+    align-self: flex-start;
+}
+
+.dashboard-left .three .div-people{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.div-person{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-person img{
+    width: 90px;
+    height: auto;
+    border-radius: 50px;
+}
+
+
+
+.dashboard-right{
+    width: 30%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashboard-right div{
+    height: 48%;
+    text-align: center;
+    padding: 10px;
+}
+
+.r-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.notifications{
+    border: 1px solid lightgray;
+    border-radius: 12px;
+}
+
+.notifications-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+}
+
+.noti{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.noti img{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.r-one input{
+    border: 1px solid lightgray;
+    width: auto;
+}
+
+.r-one div{
+    height: 80%;
+    
+}
+
+
+
+
+.r-two{
+    background-image: url('../../../assets/icons/calendar-lighter.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+}
+
+
+@media (max-width: 1024px){
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+        gap: 15px;
+    }
+
+    .dashboard-left{
+        width: 100%;
+    }
+
+
+    .dashboard-right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+    }
+
+    .dashboard-right div{
+        height: auto;
+    
+    }
+
+    .r-one{
+        width: 50%;
+        height: 100%;
+    }
+
+    .r-one div{
+        height: 100%;
+    }
+
+    .r-one input{
+        display: none;
+    }
+
+    .notifications{
+        width: 100%;
+        height: 100%;
+        border: 1px solid gray;
+        border-radius: 12px;
+
+    }
+
+    .r-two{
+        width: 100%;
+        height: 300px;
+    }
+
+   
+}
+
+
+@media (max-width: 769px){
+    .editor-layout main{
+       margin: 50px 0 0 0;
+       width: 100%;
+       overflow: auto;
+    }
+}
+
+@media (max-width: 576px){
+    
+    .dashboard-right{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+       
+    }
+
+    .dashboard-right div{
+        height: auto;
+    
+    }
+    
+    .r-one{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    
+    .r-one div{
+        height: 100%;
+        border: 1px solid lightgray;
+        border-radius: 12px;
+    }
+    
+    
+    .r-two{
+        border: 1px solid lightgray;
+        border-radius: 12px;
+        width: 100%;
+    }
+
+    
+    
+
+}

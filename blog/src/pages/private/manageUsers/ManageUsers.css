@@ -1,0 +1,22 @@
+.user-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.user{
+    width: 370px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+
+}
+
+.user .buttons{
+    justify-content: center;
+}
+
+.form-section-add-user{
+    margin: 80px 0;
+}

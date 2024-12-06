@@ -1,0 +1,215 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.gray{
+    color: gray;
+}
+
+.posts-one{
+    width: 95vw;
+    height: 88vh;
+    
+    border-radius: 12px;
+
+    background-image: url('../../../assets/pictures/posts-mountains.jpg');
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posts-one h1{
+    color: white;
+    text-align: center;
+}
+
+.left-rotate{
+    transform: rotate(180deg);
+}
+
+.posts-one-text{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.uppercase-text {
+    text-transform: uppercase;
+  }
+
+
+.posts-two{
+    margin: 50px 0;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.posts-two-filters{
+    margin: 30px 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+
+.posts-input{
+    width: 350px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--secondaryColor);
+}
+
+.posts-select{
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--secondaryColor);
+}
+
+.posts-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 35px;
+    animation: fadeIn 0.5s ease-in-out forwards;
+
+}
+
+.card{
+    border-radius: 12px;
+    width: 30vw;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.post-picture{
+    border-radius: 12px;
+}
+
+.card-gray{
+    display: flex;
+    flex-direction: row;
+    color: gray;
+    justify-content: space-between;
+}
+
+.card-bottom{
+    padding: 5px 10px;
+}
+
+.card-texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-texts h4{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-btn{
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    align-items: center;
+}
+
+.card-btn p{
+    margin: 0;
+}
+
+.profile-pic{
+    height: 60px;
+    width: auto;
+}
+
+.author-info{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.rate-icon{
+    width: 20px;
+    height: auto;
+}
+
+.author-info p{
+    margin: 0;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 15px;
+    background-color: var(--secondaryColor);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    font-size: 1rem;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@media (max-width: 1200px){
+   .card{
+    width: 350px;
+   }
+}
+
+@media (max-width: 1100px){
+    .posts-container{
+        justify-content: space-around;
+    }
+ }
+
+ @media (max-width: 780px){
+    .card{
+        width: 80vw;
+    }
+    .posts-two-filters{
+        justify-content: center;
+        margin: 10px;
+    }
+ }
+
+
+

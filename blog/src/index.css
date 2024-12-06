@@ -1,0 +1,64 @@
+:root{
+  --FontOne: "Clash Display Variable", Arial, sans-serif;
+  --FontTwo: "Work Sans", Arial, sans-serif;
+
+  --primaryColor: #01D68A;
+  --secondaryColor: rgba(22, 22, 22, 95%);
+  --lighterGray: #353535;
+  --navbarBlack: #0B0C10;
+  --borderGray: rgb(190, 190, 190);
+  --dangerRed: #F8C4B4; /*smazat*/
+  --lightPurple: #BCCEF8; /*upravit*/
+  --lightYellow: #F7F8BC; /*zvýraznit*/
+  --lightGreen: #D8EFD3; /*přidat*/
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* TEXT */
+
+h1, h2, h3, h4{
+  font-family: var(--FontOne);
+}
+
+h1{
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0;
+}
+
+
+
+p, button, a, h5, li{
+  font-family: var(--FontTwo) !important;
+}
+
+
+
+
+.link-router, li, Link, a, ul{
+  text-decoration: none !important;
+  color: white; 
+}
+
+
+
+ul, nav{
+  margin: 0;
+}
+
+.btn{
+  border-radius: 50px;
+}
+
+.logout-btn{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}

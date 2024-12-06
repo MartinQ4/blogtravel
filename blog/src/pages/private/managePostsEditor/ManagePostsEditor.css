@@ -1,0 +1,105 @@
+
+.post-list{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.editor-view-post{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 12px;
+}
+
+.editor-view-post img{
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.editor-view-post .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 30px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.btn:hover{
+    border: 1px solid var(--secondaryColor);
+    box-shadow: 2px 2px 8px gray;
+}
+
+
+.form-edit{
+    display: flex;
+    flex-direction: column;
+    font: var(--FontTwo);
+}
+
+.form-edit label{
+    margin-bottom:10px;
+    font-weight: 100;
+}
+
+.form-edit input{
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.form-edit textarea{
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.modal-content,
+.modal-header,
+.modal-body, 
+.modal-dialog{
+    font-family: var(--FontTwo);
+}
+
+.modal-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content{
+    width: 50vw;
+}
+
+
+
+.content-editing{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-editing input{
+    border: none;
+}
+
+.content-editing textarea{
+    border: none;
+    height: 120px;
+  
+}
+
+.buttons-modal{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}
+
