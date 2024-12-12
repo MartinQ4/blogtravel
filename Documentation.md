@@ -1,6 +1,6 @@
-### Dokumentace k projektu
+# Dokumentace k projektu
 
-# Osnova
+## Osnova
 -	Úvod 
 -	Popis aplikace a funkcí
 -	UI a UX
@@ -22,14 +22,14 @@ TravelBlog tak propojuje komunitu cestovatelů a nabízí intuitivní platformu,
  
 ## Popis aplikace a jejích funkcí
 
-# Hlavní funkcionality
+### Hlavní funkcionality
 Aplikace TravelBlog nabízí širokou škálu funkcí přizpůsobených potřebám různých typů uživatelů. Mezi nejdůležitější patří:
 - Čtení a vyhledávání příspěvků: Uživatelé mohou procházet a číst blogové příspěvky, filtrovat je podle autora nebo jiných kritérií.
 - Správa příspěvků: Editoři mohou vytvářet, upravovat a mazat své vlastní příspěvky.
 - Správa uživatelů: Admini mají možnost řídit přístup ostatních uživatelů, upravovat jejich údaje nebo mazat jejich účty.
 - Interakce s obsahem: Lajkování, komentování a ukládání příspěvků pro pozdější přečtení.
 
-# Uživatelské role a interakce
+### Uživatelské role a interakce
 Aplikace definuje tři hlavní role uživatelů, každá s vlastními právy a funkcemi:
 1.	Uživatel (čtenář):
 o	Vyhledávání a filtrování příspěvků (například podle autora).
