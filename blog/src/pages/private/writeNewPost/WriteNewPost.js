@@ -156,8 +156,8 @@ export default function WriteNewPost() {
           <form onSubmit={handleAddPost} className='form-add'>
             <label>Obrázek</label>
             <input type="file" id="fileInput" accept="image/*" style={{ display: 'none' }}  />
-            <button type="button" id="customButton" className='btn'>Vyberte soubor</button>
-            <span id="fileName">Žádný soubor nevybrán</span>
+            <button type="button" id="customButton" className='btn purple'>Vyberte soubor</button>
+            
             <label>Název</label>
             <input
               type="text"
@@ -192,12 +192,12 @@ export default function WriteNewPost() {
                 ></textarea>
               </div>
             ))}
-            <button type="button" onClick={handleAddSection} className='btn'>
+            <button type="button" onClick={handleAddSection} className='btn purple'>
               Přidat sekci
             </button>
 
             <div className="buttons-modal">
-              <button type="submit" className="btn">
+              <button type="submit" className="btn green">
                 Přidat příspěvek
               </button>
             </div>

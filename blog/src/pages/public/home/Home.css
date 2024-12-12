@@ -70,6 +70,24 @@ h2{
     
 }
 
+.btn.purple{
+    background-color: var(--lightPurple);
+}
+
+.btn.red{
+    background-color: var(--dangerRed);
+}
+
+.btn.yellow{
+    background-color: var(--lightYellow);
+}
+
+.btn.green{
+    background-color: var(--lightGreen);
+}
+
+
+
 .btn a {
     cursor: pointer !important;
   }

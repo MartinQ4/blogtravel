@@ -16,6 +16,7 @@ import ManagePostsAdmin from './pages/private/managePostsAdmin/ManagePostsAdmin'
 import ManageUsers from './pages/private/manageUsers/ManageUsers';
 import ManagePostsEditor from './pages/private/managePostsEditor/ManagePostsEditor';
 import WriteNewPost from './pages/private/writeNewPost/WriteNewPost';
+import ProfileEditor from './pages/private/profileEditor/ProfileEditor';
 
 function App() {
   const { isAuthenticated, role, currentRole } = useSelector((state) => state.auth);
@@ -37,6 +38,7 @@ function App() {
           <Route path="/dashboard/editor" element={isAuthenticated && currentRole === 'editor' ? <DashboardEditor/> : <Navigate to="/login"/>}/>
           <Route path="/manage-posts-editor" element={isAuthenticated && currentRole === 'editor' ? <ManagePostsEditor/> : <Navigate to="/login"/>}/>
           <Route path="/write-new-post" element={isAuthenticated && currentRole === 'editor' ? <WriteNewPost/> : <Navigate to="/login"/>}/>
+          <Route path="/profile-editor" element={isAuthenticated && currentRole === 'editor' ? <ProfileEditor/> : <Navigate to="/login"/>}/>
           
           <Route path="/dashboard/admin" element={isAuthenticated && currentRole === 'admin' ? <DashboardAdmin/> : <Navigate to="/login"/>}/>
           <Route path="/manage-posts-admin" element={isAuthenticated && currentRole === 'admin' ? <ManagePostsAdmin/> : <Navigate to="/login"/>}/>

@@ -3,18 +3,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.login-background{
+   width: 90%;
+   height: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 12px;
+   background-image: url('../../../assets/pictures/login-woods.jpg');
+    background-size: cover;
 }
 
 .login-container{
     width: 500px;
     height: 500px;
     padding: 30px 20px;
-    border: 1px solid black;
     border-radius: 12px;
+    box-shadow: 2px 2px 8px gray;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: white;
+    opacity: 95%;
 }
 
 .login-container .btn{
@@ -39,4 +54,11 @@
 
 .links{
     width: 100%;
+}
+
+@media (max-width: 769px){
+    .login-container{
+        width: 80%;
+        height: auto;
+    }
 }

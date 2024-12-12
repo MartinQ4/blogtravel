@@ -165,7 +165,7 @@ export default function ManagePostsAdmin() {
               <div className="buttons">
                 <button
                   onClick={() => setEditingPost(post)}
-                  className="btn"
+                  className="btn purple"
                   type="button"
                   data-bs-toggle="modal"
                   data-bs-target={`#staticBackdrop-${post.id}`}
@@ -174,7 +174,7 @@ export default function ManagePostsAdmin() {
                 </button>
                 <button
                   onClick={() => handleDeletePost(post.id)}
-                  className="btn"
+                  className="btn red"
                 >
                   Smazat
                 </button>

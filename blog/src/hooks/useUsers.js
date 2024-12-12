@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const useUsers = () => {
     const [users, setUsers] = useState([]);
+    const [currentUser, setCurrentUser] = useState(null); 
     const [newUser, setNewUser] = useState({
         username: '',
         firstname: '',
@@ -13,7 +14,6 @@ const useUsers = () => {
     });
     const [editingUser, setEditingUser] = useState(null);
 
-    // Fetch users
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -24,7 +24,12 @@ const useUsers = () => {
             .catch(error => console.error('Error fetching users:', error));
     };
 
-    // Handle input change for new user
+    const fetchUserById = (id) => {
+        axios.get(`http://localhost:8000/users/${id}`)
+            .then(response => setCurrentUser(response.data))
+            .catch(error => console.error('Error fetching user by ID:', error));
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setNewUser({
@@ -33,7 +38,6 @@ const useUsers = () => {
         });
     };
 
-    // Handle input change for editing user
     const handleEditChange = (e) => {
         const { name, value } = e.target;
         setEditingUser({
@@ -42,7 +46,6 @@ const useUsers = () => {
         });
     };
 
-    // Add a new user
     const handleAddUser = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8000/users', newUser)
@@ -60,12 +63,11 @@ const useUsers = () => {
             .catch(error => console.error('Error adding user:', error));
     };
 
-    // Start editing a user
+
     const handleEdit = (user) => {
         setEditingUser(user);
     };
 
-    // Update an existing user
     const handleUpdateUser = (e) => {
         e.preventDefault();
         axios.patch(`http://localhost:8000/users/${editingUser.id}`, editingUser)
@@ -78,7 +80,6 @@ const useUsers = () => {
             .catch(error => console.error('Error updating user:', error));
     };
 
-    // Delete a user
     const handleDeleteUser = (userId) => {
         axios.delete(`http://localhost:8000/users/${userId}`)
             .then(() => {
@@ -91,6 +92,8 @@ const useUsers = () => {
         users,
         newUser,
         editingUser,
+        currentUser,
+        fetchUserById,
         handleChange,
         handleEditChange,
         handleAddUser,

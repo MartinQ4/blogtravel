@@ -245,7 +245,7 @@ export default function ManagePostsEditor() {
                   <div className="buttons">
                     <button
                       onClick={() => setEditingPost(post)}
-                      className="btn"
+                      className="btn purple"
                       type="button"
                       data-bs-toggle="modal"
                       data-bs-target={`#staticBackdrop-${post.id}`}
@@ -254,7 +254,7 @@ export default function ManagePostsEditor() {
                     </button>
                     <button
                       onClick={() => handleDeletePost(post.id)}
-                      className="btn"
+                      className="btn red"
                     >
                       Smazat
                     </button>
@@ -330,7 +330,7 @@ export default function ManagePostsEditor() {
                             <div className='buttons-modal'>
                               <button
                                 type="submit"
-                                className="btn"
+                                className="btn green"
                                 data-bs-dismiss="modal"
                               >
                                 Uložit
@@ -338,7 +338,7 @@ export default function ManagePostsEditor() {
                               <button
                                 type="button"
                                 onClick={() => setEditingPost(null)}
-                                className="btn"
+                                className="btn red"
                               >
                                 Zrušit
                               </button>

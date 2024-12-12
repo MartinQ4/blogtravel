@@ -37,8 +37,8 @@ export default function ManageUsers() {
                         <p><strong>Email:</strong> {user.email}</p>
                         <p><strong>Role:</strong> {user.role}</p>
                         <div className='buttons'>
-                            <button onClick={() => handleEdit(user)} className='btn'>Edit</button>
-                            <button onClick={() => handleDeleteUser(user.id)} className='btn'>Delete</button>
+                            <button onClick={() => handleEdit(user)} className='btn purple'>Edit</button>
+                            <button onClick={() => handleDeleteUser(user.id)} className='btn red'>Delete</button>
                         </div>
                     </div>
                 ))}
@@ -103,12 +103,12 @@ export default function ManageUsers() {
 
 
             <div className='form-section-add-user'>
-                <h3>Add New User</h3>
+                <h3>Přidat nového uživatele</h3>
                 <form onSubmit={handleAddUser} className='form-add'>
                     <input
                         type="text"
                         name="username"
-                        placeholder="Username"
+                        placeholder="Uživatelské jméno"
                         value={newUser.username}
                         onChange={handleChange}
                         required
@@ -116,7 +116,7 @@ export default function ManageUsers() {
                     <input
                         type="text"
                         name="firstname"
-                        placeholder="First Name"
+                        placeholder="Jméno"
                         value={newUser.firstname}
                         onChange={handleChange}
                         required
@@ -124,7 +124,7 @@ export default function ManageUsers() {
                     <input
                         type="text"
                         name="lastname"
-                        placeholder="Last Name"
+                        placeholder="Příjmení"
                         value={newUser.lastname}
                         onChange={handleChange}
                         required
@@ -132,7 +132,7 @@ export default function ManageUsers() {
                     <input
                         type="password"
                         name="password"
-                        placeholder="Password"
+                        placeholder="Heslo"
                         value={newUser.password}
                         onChange={handleChange}
                         required
@@ -153,7 +153,7 @@ export default function ManageUsers() {
                         onChange={handleChange}
                         required
                     />
-                    <button type="submit" className='btn'>Přidat</button>
+                    <button type="submit" className='btn green'>Přidat</button>
                 </form>
             </div>
 
