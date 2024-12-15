@@ -1,85 +1,38 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../../components/navbar/Navbar';
-import axios from 'axios';
+import { usePosts } from '../../../hooks/usePosts';
 import './Posts.css';
 import Arrow from '../../../assets/icons/arrow-big.svg';
 import Heart from '../../../assets/icons/heart-fill.svg';
 import Bouble from '../../../assets/icons/bouble.svg';
 
-
 export default function Posts() {
-  const [posts, setPosts] = useState([]);
-  const [filteredPosts, setFilteredPosts] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterAuthorId, setFilterAuthorId] = useState('');
+  const {
+    filteredPosts,
+    users,
+    searchTerm,
+    filterAuthorId,
+    getAuthorName,
+    getAuthorPic,
+    getAuthorNick,
+    handleSearch,
+    handleFilterByAuthor,
+  } = usePosts();
+
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6; 
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const postsResponse = await axios.get('http://localhost:8000/posts');
-        const usersResponse = await axios.get('http://localhost:8000/users');
-        setPosts(postsResponse.data);
-        setFilteredPosts(postsResponse.data); 
-        setUsers(usersResponse.data);
-      } catch (error) {
-        console.error("Error fetching data", error);
-      }
-    };
-    fetchData();
-  }, []);
-
-  const getAuthorName = (authorId) => {
-    const user = users.find(user => user.id.toString() === authorId.toString());
-    return user ? `${user.firstname} ${user.lastname}` : 'Unknown Author';
-  };
-
-  const getAuthorPic = (authorId) => {
-    const user = users.find(user => user.id.toString() === authorId.toString());
-    return user ? `${user.profilepic}` : 'Unknown Author';
-  }
-
-  const getAuthorNick = (authorId) => {
-    const user = users.find(user => user.id.toString() === authorId.toString());
-    return user ? `${user.username}` : 'Unknown Author';
-  }
-
-  const navigate = useNavigate();
-  const handleReadMore = (postId) => {
-    navigate(`/posts/${postId}`);
-  };
-
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-    const lowercasedSearch = e.target.value.toLowerCase();
-    setFilteredPosts(
-      posts.filter(
-        post =>
-          post.title.toLowerCase().includes(lowercasedSearch) ||
-          post.description.toLowerCase().includes(lowercasedSearch) ||
-          post.category.toLowerCase().includes(lowercasedSearch)
-      )
-    );
-  };
-
-  const handleFilterByAuthor = (e) => {
-    const authorId = e.target.value;
-    setFilterAuthorId(authorId);
-    if (authorId === '') {
-      setFilteredPosts(posts); 
-    } else {
-      setFilteredPosts(posts.filter(post => post.authorId.toString() === authorId));
-    }
-  };
-
+  const postsPerPage = 6;
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
 
+  const navigate = useNavigate();
+
+  const handleReadMore = (postId) => {
+    navigate(`/posts/${postId}`);
+  };
 
   const handleNextPage = () => {
     if (currentPage < Math.ceil(filteredPosts.length / postsPerPage)) {
@@ -87,22 +40,17 @@ export default function Posts() {
     }
   };
 
-
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
   };
 
-  
-
-
   return (
     <div>
       <Navbar />
 
       <main>
-
         <section className='posts-one'>
           <div className='posts-one-text'>
             <img src={Arrow} className='left-rotate' alt='img'></img>
@@ -114,7 +62,7 @@ export default function Posts() {
         <section className='posts-two'>
           <h1>Knihovna článků</h1>
 
-          <div className='posts-two-filters'>          
+          <div className='posts-two-filters'>
             <select value={filterAuthorId} onChange={handleFilterByAuthor} className='posts-select'>
               <option value="">Autor</option>
               {users
@@ -125,17 +73,22 @@ export default function Posts() {
                   </option>
                 ))}
             </select>
-            <input type="text" placeholder="Např. město, autor, ..." value={searchTerm} onChange={handleSearch} className='posts-input'/>
+            <input
+              type="text"
+              placeholder="Např. město, autor, ..."
+              value={searchTerm}
+              onChange={handleSearch}
+              className='posts-input'
+            />
           </div>
 
           <div>
             <div className="posts-container">
               {currentPosts.map(post => (
                 <div className="card" key={post.id}>
-                  <img src={post.picture} alt={post.title} className='post-picture'/>
-                  
-                  <div className='card-bottom'>
+                  <img src={post.picture} alt={post.title} className='post-picture' />
 
+                  <div className='card-bottom'>
                     <div className='card-gray'>
                       <p className='uppercase-text'>{post.category}</p>
                       <p>Přidáno: {new Date(post.date).toLocaleDateString()}</p>
@@ -147,27 +100,29 @@ export default function Posts() {
                     </div>
 
                     <div className='author-info'>
-                      <img src={getAuthorPic(post.authorId)} className='profile-pic' alt='profile-pic'></img>
+                      <img src={getAuthorPic(post.authorId)} className='profile-pic' alt='profile-pic' />
                       <div>
                         <p>{getAuthorName(post.authorId)}</p>
                         <p className='gray'>{getAuthorNick(post.authorId)}</p>
                       </div>
-
                     </div>
-                    
+
                     <div className='card-btn'>
-                      
-                      <p><img src={Heart} className='rate-icon' alt='like'></img> {post.likes}</p>
-                      <p><img src={Bouble} className='rate-icon' alt='comment'></img> {post.comments.length}</p>
-                      <button className='btn' onClick={() => handleReadMore(post.id)}>Číst</button>
+                      <p>
+                        <img src={Heart} className='rate-icon' alt='like' /> {post.likes}
+                      </p>
+                      <p>
+                        <img src={Bouble} className='rate-icon' alt='comment' /> {post.comments.length}
+                      </p>
+                      <button className='btn' onClick={() => handleReadMore(post.id)}>
+                        Číst
+                      </button>
                     </div>
-
                   </div>
                 </div>
               ))}
             </div>
 
-           
             <div className="pagination">
               <button onClick={handlePrevPage} disabled={currentPage === 1}>
                 Předchozí
@@ -175,13 +130,15 @@ export default function Posts() {
               <span>
                 Stránka {currentPage} z {Math.ceil(filteredPosts.length / postsPerPage)}
               </span>
-              <button onClick={handleNextPage} disabled={currentPage === Math.ceil(filteredPosts.length / postsPerPage)}>
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === Math.ceil(filteredPosts.length / postsPerPage)}
+              >
                 Další
               </button>
             </div>
           </div>
         </section>
-
       </main>
     </div>
   );
