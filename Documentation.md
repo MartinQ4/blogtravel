@@ -25,7 +25,7 @@ TravelBlog tak propojuje komunitu cestovatelů a nabízí intuitivní platformu,
 
 ### Hlavní funkcionality
 Aplikace TravelBlog nabízí širokou škálu funkcí přizpůsobených potřebám různých typů uživatelů. Mezi nejdůležitější patří:
-- Čtení a vyhledávání příspěvků: Uživatelé mohou procházet a číst blogové příspěvky, filtrovat je podle autora nebo jiných kritérií.
+- Čtení a vyhledávání příspěvků: Uživatelé mohou procházet a číst blogové příspěvky, filtrovat je podle autora.
 - Správa příspěvků: Editoři mohou vytvářet, upravovat a mazat své vlastní příspěvky.
 - Správa uživatelů: Admini mají možnost řídit přístup ostatních uživatelů, upravovat jejich údaje nebo mazat jejich účty.
 - Interakce s obsahem: Lajkování, komentování a ukládání příspěvků pro pozdější přečtení.
@@ -33,23 +33,23 @@ Aplikace TravelBlog nabízí širokou škálu funkcí přizpůsobených potřeb�
 ### Uživatelské role a interakce
 Aplikace definuje tři hlavní role uživatelů, každá s vlastními právy a funkcemi:
 1.	Uživatel (čtenář):
-o	Vyhledávání a filtrování příspěvků (například podle autora).
-o	Zobrazení detailu příspěvku.
-o	Přidávání komentářů a lajkování příspěvků.
-2.	Editor (autor):
-o	Vytváření nových příspěvků.
-o	Editace vlastních příspěvků.
-o	Mazání vlastních příspěvků.
-3.	Admin (správce):
-o	Správa uživatelů (vytváření nových, reset hesla, úprava údajů a oprávnění, mazání uživatelů).
-o	Přehled a správa všech uživatelů a editorů.
-o	Možnost zobrazit, upravit nebo smazat jakýkoli příspěvek v aplikaci.
+     - Vyhledávání a filtrování příspěvků (například podle autora).
+     - Zobrazení detailu příspěvku.
+     - Přidávání komentářů a lajkování příspěvků.
+2. Editor (autor):
+     - Vytváření nových příspěvků.
+     - Editace vlastních příspěvků.
+     - Mazání vlastních příspěvků.
+3. Admin (správce):
+     - Správa uživatelů (vytváření nových, reset hesla, úprava údajů a oprávnění, mazání uživatelů).
+     - Přehled a správa všech uživatelů a editorů.
+     - Možnost zobrazit, upravit nebo smazat jakýkoli příspěvek v aplikaci.
  
 ## UI a UX
 
 ### UI
-Cílem návrhu uživatelského rozhraní bylo vytvořit jednoduché, přehledné a vizuálně příjemné prostředí, které zohledňuje vysoký podíl fotografického obsahu. 
-Barevná paleta a rozvržení byly voleny s ohledem na snadnou čitelnost a intuitivní navigaci, což je zásadní pro aplikaci, která bude využívána cestovatelskou komunitou.
+Cílem návrhu uživatelského rozhraní bylo vytvořit jednoduché a přehledné prostředí, které zohledňuje vysoký podíl fotografického obsahu. 
+Barevná paleta a rozvržení byly voleny s ohledem na snadnou čitelnost a intuitivní navigaci.
 
 #### Prvky
 Navigace:
@@ -108,20 +108,20 @@ Privátní stránky:
 ## Technický popis řešení
 
 ### Použité technologie 
--	Frontend 
-o	React (verze 18.3.1) – pro vývoj uživatelského rozhraní.
-o	Vanilla JavaScript – pro základní funkcionality bez závislosti na knihovnách.
-o	React Router (verze 7.0.1) – pro navigaci mezi stránkami.
-o	Axios (verze 1.7.7) – pro komunikaci s API.
+-	Frontend
+    - React (verze 18.3.1) – pro vývoj uživatelského rozhraní.
+    - Vanilla JavaScript – pro základní funkcionality bez závislosti na knihovnách.
+    - React Router (verze 7.0.1) – pro navigaci mezi stránkami.
+    - Axios (verze 1.7.7) – pro komunikaci s API.
 -	Backend
-o	Simulovaný pomocí JSON Serveru – slouží jako jednoduchý mock backend pro správu dat.
+    -	Simulovaný pomocí JSON Serveru – slouží jako jednoduchý mock backend pro správu dat.
 -	Styly
-o	CSS – pro přizpůsobení vzhledu aplikace
-o	Bootstrap – pro základní designové komponenty
+    -	CSS – pro přizpůsobení vzhledu aplikace
+    -	Bootstrap – pro základní designové komponenty
 -	Správa stavu
-o	Redux (verze 9.1.2) – pro centralizovanou správu stavu aplikace.
+    -	Redux (verze 9.1.2) – pro centralizovanou správu stavu aplikace.
 -	Vývojové prostředí
-o	Visual Studio Code – používané jako hlavní IDE pro vývoj
+    -	Visual Studio Code – používané jako hlavní IDE pro vývoj
 
 
 ### Struktura kódu
@@ -144,23 +144,19 @@ o	Visual Studio Code – používané jako hlavní IDE pro vývoj
 Aplikace používá následující endpointy:
 
 1.	/users – pro správu uživatelů.
-o	Uchovává informace jako: ID, uživatelské jméno, email, role, heslo, bio, oblíbená místa, cestovní preference, apod.
+    - Uchovává informace jako: ID, uživatelské jméno, email, role, heslo, bio, oblíbená místa, cestovní preference, apod.
 
-3.	/posts – pro správu příspěvků.
-o	Uchovává informace jako: ID, nadpis, obsah, kategorie, obrázky, datum vytvoření, ID autora, počet lajků, komentáře, apod.
+2. 	/posts – pro správu příspěvků.
+    - Uchovává informace jako: ID, nadpis, obsah, kategorie, obrázky, datum vytvoření, ID autora, počet lajků, komentáře, apod.
 
-5.	/comments – pro správu komentářů.
-o	Uchovává informace jako: ID, ID příspěvku, ID autora, obsah komentáře, datum, schválení, apod.
+3. 	/comments – pro správu komentářů.
+    - Uchovává informace jako: ID, ID příspěvku, ID autora, obsah komentáře, datum, apod.
 
 ### Formát dat 
 -	Všechna data jsou uložena v jednom souboru db.json, jehož struktura vypadá takto: { "users": [], "posts": [], "comments": [] }
 
--	Každá z těchto kategorií obsahuje odpovídající objekty. Jejich vlastnosti zahrnují:
--	users: ID, uživatelské jméno, email, heslo, role, profilový obrázek, bio, oblíbená destinace, sociální sítě, apod.
--	posts: ID, nadpis, obsah, kategorie, hashtagy, datum vytvoření, ID autora, počet lajků, seznam komentářů, apod.
--	comments: ID, ID příspěvku, ID autora, text komentáře, datum, schválení apod.
 
- 
+ 
 ## Návod ke spuštění
 
 ### Předpoklady
@@ -177,8 +173,8 @@ o	Uchovává informace jako: ID, ID příspěvku, ID autora, obsah komentáře, 
 ## Závěr
 
 ### Shrnutí projektu a jeho přínosů
-TravelBlog je jednoduchá, ale funkčně bohatá aplikace, která simuluje prostředí pro sdílení cestovatelských příběhů. 
-Díky třem rolím uživatelů (uživatel, editor a admin) nabízí aplikace širokou škálu funkcionalit od vyhledávání příspěvků a komentování, až po správu uživatelských účtů a příspěvků. 
+TravelBlog je jednoduchá aplikace, která simuluje prostředí pro sdílení cestovatelských příběhů. 
+Díky třem rolím uživatelů (uživatel, editor a admin) nabízí aplikace širokou škálu funkcionalit od vyhledávání příspěvků až po správu uživatelských účtů a příspěvků. 
 Přestože backend je simulovaný pomocí JSON Serveru, aplikace dokazuje svou použitelnost a připravenost na případnou integraci s reálným backendovým řešením.
 
 Hlavní přínosy projektu zahrnují:
@@ -187,11 +183,12 @@ Hlavní přínosy projektu zahrnují:
 - Získání zkušeností s organizací kódu a použitím simulovaného backendu pro účely testování frontendu.
 
 ### Zkušenosti z vývoje
-Tento projekt byl mým prvním setkáním s Reactem a stal se příležitostí k osvojování nových technologií. Naučila jsem se:
+Tento projekt byl mým prvním setkáním s Reactem a stal se příležitostí k osvojování nových technologií. 
+
+Naučila jsem se:
 - Pracovat s Reactem, což zahrnovalo pochopení základních principů komponentového modelu, práce se stavy a reaktivitou.
 - Ovládat React Router pro implementaci navigace mezi stránkami a správu různých cest aplikace.
-- Používat Redux k efektivní správě stavu aplikace, což mi umožnilo vytvořit centralizovaný a snadno udržovatelný model dat.
 
-Tento projekt mi pomohl vybudovat základy pro práci s moderními frontendovými technologiemi. Do budoucna plánuji využít získané zkušenosti k vytvoření vlastního frontendového řešení pro můj další projekt – ročníkový projekt, který bude postaven na Reactu a nabídne ještě propracovanější funkcionality. 
+
 
 
